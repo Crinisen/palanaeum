@@ -14,7 +14,7 @@ logger = logging.getLogger('palanaeum.admin')
 
 CONFIG_ENTRIES = {
     # key: (type, default value)
-    'page_title': ('str', 'Palanaeum'),
+    'page_title': ('str', 'Abidan Archive'),
     'default_page_length': ('int', 20),
     'approval_message': ('str', 'Reviewed'),
     'review_pending_explanation': ('str', 'This event is waiting for review. The information here might not be correct.'),
