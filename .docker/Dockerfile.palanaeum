@@ -38,6 +38,6 @@ RUN chmod +x /srv/palanaeum/entrypoint.sh
 
 # Copy the rest of the code. 
 COPY . /srv/palanaeum/
-
+VOLUME [ "/srv/palanaeum/logs", "/srv/palanaeum/media", "/srv/palanaeaum/backups" ]
 ENTRYPOINT ["/srv/palanaeum/entrypoint.sh"]
 
