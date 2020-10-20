@@ -1,5 +1,6 @@
 #!/bin/sh
 
+echo "Starting Palanaeum Docker Container..."
 if [ "$DATABASE" = "postgres" ]; then
    echo "Waiting for postgres..."
 

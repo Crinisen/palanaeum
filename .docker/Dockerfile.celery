@@ -32,17 +32,11 @@ RUN pip install -r requirements.txt
 #Load our Docker files
 COPY .docker/keyconfig.py /srv/palanaeum/palanaeum/settings/
 COPY .docker/local.py /srv/palanaeum/palanaeum/settings/
+#COPY .docker/entrypoint.sh /srv/palanaeum/
+#RUN chmod +x /srv/palanaeum/entrypoint.sh
 
 # Copy the rest of the code. 
 COPY . /srv/palanaeum/
-
-# Install gunicorn
-RUN pip install gunicorn
-
-# Add entrypoint to correct location
-COPY .docker/palanaeum.entrypoint.sh /srv/palanaeum/entrypoint.sh
-RUN chmod +x /srv/palanaeum/entrypoint.sh
-
-VOLUME [ "/srv/palanaeum/logs", "/srv/palanaeum/media", "/srv/palanaeaum/backups" ]
-ENTRYPOINT ["/srv/palanaeum/entrypoint.sh"]
+#VOLUME [ "/srv/palanaeum/logs", "/srv/palanaeum/media", "/srv/palanaeaum/backups" ]
+#ENTRYPOINT ["/srv/palanaeum/entrypoint.sh"]
 
