@@ -14,9 +14,13 @@ deploy
 !README.md
 !requirements.txt
 
+!palanaeum/settings/local.py
+
+.idea/
+.vagrant/
 _pycache__
 **/__pycache__
 *.pyc
+**/*.pyc
 .sass-cache
 venv
-!palanaeum/settings/local.py
